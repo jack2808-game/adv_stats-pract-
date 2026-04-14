@@ -1,0 +1,4 @@
+options(repos = c(CRAN="http://cran.r-project.org/"))
+
+install.packages("e1071")
+library(e1071)
