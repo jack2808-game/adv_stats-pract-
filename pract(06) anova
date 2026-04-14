@@ -1,0 +1,17 @@
+#one way anova
+
+data<-data.frame(
+  marks=c(10,20,30,40,50),
+  groups=c("a","a","a","b","b")
+)
+result<-aov(marks~groups,data=data)
+summary(result)
+
+#two way anova
+data<-data.frame(
+  marks=c(10,20,30,40,50),
+  groups=c("a","a","a","b","b"),
+  gender=c("f","f","m","m","f")
+)
+result<-aov(marks~groups+gender,data=data)
+summary(result)
