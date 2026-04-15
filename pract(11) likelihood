@@ -1,0 +1,11 @@
+# Likelihood Ratio Test in R
+
+obs <- c(20,30,50)
+exp <- c(30,30,40)
+
+g2 <- 2 * sum(obs * log(obs/exp))#check how likely obs match exp value
+
+p <- 1 - pchisq(g2, df=2)
+
+print(g2)
+print(p)
